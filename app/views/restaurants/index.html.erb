@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurantes</h1>
+
+<%= link_to "Novo restaurante", new_restaurant_path, class: "btn btn-success mb-3" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.category %></td>
+        <td><%= restaurant.phone_number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

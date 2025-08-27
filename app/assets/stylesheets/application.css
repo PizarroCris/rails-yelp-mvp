@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .fa-star {
+  color: #f6c802;
+  text-shadow: 1px 1px 2px black;
+ }
